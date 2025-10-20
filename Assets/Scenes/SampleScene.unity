@@ -340,8 +340,20 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7066437195269857081, guid: a427db2d6dcde7b41b224583235215fa, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066437195269857081, guid: a427db2d6dcde7b41b224583235215fa, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066437195269857081, guid: a427db2d6dcde7b41b224583235215fa, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066437195269857081, guid: a427db2d6dcde7b41b224583235215fa, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7137899967073864003, guid: a427db2d6dcde7b41b224583235215fa, type: 3}
       propertyPath: m_Name

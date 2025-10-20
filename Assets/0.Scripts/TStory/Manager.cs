@@ -13,4 +13,9 @@ public class Manager : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Ãæµ¹");
+    }
 }

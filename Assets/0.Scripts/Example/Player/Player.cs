@@ -5,22 +5,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int maxHp = 3;
+    [SerializeField] private float maxHp = 3;
 
-    private int hp;
-    public int Hp
+    private float currentHp;
+    public float CurrentHp
     {
-        get { return hp; }
+        get { return currentHp; }
         set
         {
             if (value > maxHp)
                 value = maxHp;
 
-            hp = value;
+            currentHp = value;
 
             if(value <= 0)
             {
-                //게임 오버
+                gameObject.SetActive(false);
             }
         }
     }
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         playerHorizonHalfSize = col.bounds.extents.x;
         playerVerticalHalfSize = col.bounds.extents.z;
 
-        Hp = maxHp;
+        CurrentHp = maxHp;
     }
 
     private void Move()
@@ -80,11 +80,16 @@ public class Player : MonoBehaviour
         transform.position = nextposition;
     }
 
+    public void OnTakeDamage(float damage)
+    {
+        CurrentHp -= damage;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Enemy"))
         {
-            Hp--;
+
         }
     }
 }

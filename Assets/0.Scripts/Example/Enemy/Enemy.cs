@@ -67,7 +67,11 @@ public class Enemy : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Player player = collision.collider.GetComponent<Player>();
+
+            if (player == null) return;
+
+            player.OnTakeDamage(1);
         }
     }
 }

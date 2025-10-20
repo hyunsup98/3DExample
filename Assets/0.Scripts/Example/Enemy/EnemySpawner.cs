@@ -49,7 +49,6 @@ public class EnemySpawner : MonoBehaviour
     private void GetSpawnTime()
     {
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
-        Debug.Log(spawnTime);
     }
 
     private void SpawnEnemy()
@@ -58,6 +57,10 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefab, spawnPos, transform.rotation);
     }
 
+    /// <summary>
+    /// 콜라이더의 위치 + (-콜라이더의 크기 / 2 ~ +콜라이더의 크기 / 2) 랜덤 위치 반환
+    /// </summary>
+    /// <returns></returns>
     private Vector3 GetRandomPos()
     {
         Vector3 pos = col.transform.position;

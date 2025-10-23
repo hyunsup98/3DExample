@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using System;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-    [SerializeField] private Transform target;
-    [SerializeField] private float speed = 5f;
+    private UnityAction<int> unityAction;
+    private Action cSharpAction;
+    [SerializeField] private Button button;
 
-    private void Update()
-    {
-        
-    }
+    [SerializeField] private LayerMask layerMask;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        Debug.Log("Ãæµ¹");
+
     }
 }
